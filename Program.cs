@@ -11,7 +11,7 @@ namespace ConsoleApp2
        static void Main(string[] argv)
         {
             bool flag = false;
-            int fMult, sMult;
+            float fMult, sMult;
             fMult = sMult = 0;
             Console.WriteLine("Введите множители ");
 
@@ -22,8 +22,8 @@ namespace ConsoleApp2
                 flag = true;
                 try
                 {
-                    fMult = int.Parse(input[0]);
-                    sMult = int.Parse(input[1]);
+                    fMult = float.Parse(input[0]);
+                    sMult = float.Parse(input[1]);
                 }
                 catch
                 {
@@ -34,12 +34,9 @@ namespace ConsoleApp2
 
             Console.WriteLine("Произведение = {0}", Multiple(fMult, sMult));
         }
-        static long Multiple(int first, int second)
+        static float Multiple(float first, float second)
         {
-            long mult = first;
-            for (int i = 1; i < second; i++)
-                mult += first;
-            return mult;
+            return first * second; 
         }
     }
 }
